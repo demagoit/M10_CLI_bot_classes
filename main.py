@@ -150,6 +150,20 @@ class Record():
         raise ValueError(
             f'Phone "{old_phone}" not found for contact "{self.name}".')
 
+    def __find_phone_pattern(func):
+        def inner(self, phone):
+            result = func(self, phone)
+            if result:
+                return result
+            else:
+                match_list = []
+                for item in self.phones:
+                    if phone in item.value:
+                        match_list.append(item.value)
+                return '\n'.join(match_list) if match_list else None
+        return inner
+
+    @__find_phone_pattern
     def find_phone(self, phone):
         '''пошук об'єктів'''
         for item in self.phones:
@@ -201,11 +215,36 @@ class AddressBook(UserDict):
         '''додає запис до self.data.'''
         self.data[str(contact.name)] = contact
 
+    def __find_name_pattern(func):
+        def inner(self, name):
+            result = func(self, name)
+            if result:
+                return result
+            else:        
+                match_list = []
+                for item in self.data.keys():
+                    pattern_match = item.lower().find(name.lower())
+                    if pattern_match != -1:
+                        match_list.append(str(self.find(item)))
+                return '\n'.join(match_list) if match_list else None
+        
+        return inner
+
+    @__find_name_pattern        
     def find(self, name):
         '''знаходить запис за ім'ям.'''
         if name in self.data.keys():
             return self.data.get(name)
         return None
+
+    def find_by_phone(self, phone):
+        '''знаходить запис за номером.'''
+        match_list = []
+        for name in self.data.keys():
+            found = self.data.get(name).find_phone(phone)
+            if found:
+                match_list.append(str(self.data.get(name)))
+        return '\n'.join(match_list) if match_list else None
 
     def delete(self, name):
         '''який видаляє запис за ім'ям.'''
@@ -249,12 +288,21 @@ class AddressBook(UserDict):
 #     print(record)
 
 # john = book.find("John")
-# john.edit_phone("1234567890", "1112223333")
+# john.edit_phone("5555555555", "1112223333")
 
 # print(john)
 
-# found_phone = john.find_phone("5555555555")
+# mult = book.find("j")
+# print(f'\n------\n{mult}\n----')
+
+# found_phone = john.find_phone("1112223333")
 # print(f"{john.name}: {found_phone}")
+
+# mult = john.find_phone("23")
+# print(f'\n------\n{mult}\n----')
+
+# mult = book.find_by_phone('9')
+# print(f'\n------\n{mult}\n----')
 
 # book.delete("Jane")
 
