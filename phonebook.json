@@ -3,155 +3,62 @@
         "name": "John",
         "phones": [
             "1234567890",
-            "1112223333"
+            "5555555555"
         ],
-        "birthday": null
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     },
-    "Juli": {
-        "name": "Juli",
+    "Jane": {
+        "name": "Jane",
         "phones": [
             "9876543210"
         ],
-        "birthday": "1980-12-11"
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     },
-    "Uofr": {
-        "name": "Uofr",
+    "Aqrv": {
+        "name": "Aqrv",
         "phones": [
-            "2381566160"
+            "1294422115"
         ],
-        "birthday": null
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     },
-    "Jvnf": {
-        "name": "Jvnf",
+    "Mwat": {
+        "name": "Mwat",
         "phones": [
-            "3939926531"
+            "6608168561"
         ],
-        "birthday": null
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     },
-    "Ibhq": {
-        "name": "Ibhq",
+    "Hgho": {
+        "name": "Hgho",
         "phones": [
-            "2004560763"
+            "6882156093"
         ],
-        "birthday": null
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     },
-    "Fygk": {
-        "name": "Fygk",
+    "Omaw": {
+        "name": "Omaw",
         "phones": [
-            "7128953916"
+            "1807103424",
+            "0123456789"
         ],
-        "birthday": null
-    },
-    "Qwtf": {
-        "name": "Qwtf",
-        "phones": [
-            "3092544922"
-        ],
-        "birthday": null
-    },
-    "Xugs": {
-        "name": "Xugs",
-        "phones": [
-            "1991742659"
-        ],
-        "birthday": null
-    },
-    "Flmx": {
-        "name": "Flmx",
-        "phones": [
-            "2404515125"
-        ],
-        "birthday": null
-    },
-    "Icab": {
-        "name": "Icab",
-        "phones": [
-            "9071053675"
-        ],
-        "birthday": null
-    },
-    "Vima": {
-        "name": "Vima",
-        "phones": [
-            "9976363432"
-        ],
-        "birthday": null
-    },
-    "Rpyz": {
-        "name": "Rpyz",
-        "phones": [
-            "3505349408"
-        ],
-        "birthday": null
-    },
-    "Oqvu": {
-        "name": "Oqvu",
-        "phones": [
-            "0641020181"
-        ],
-        "birthday": null
-    },
-    "Clnz": {
-        "name": "Clnz",
-        "phones": [
-            "1497882076"
-        ],
-        "birthday": null
-    },
-    "Xorg": {
-        "name": "Xorg",
-        "phones": [
-            "3082877800"
-        ],
-        "birthday": null
-    },
-    "Gago": {
-        "name": "Gago",
-        "phones": [
-            "2753374193"
-        ],
-        "birthday": null
-    },
-    "Gsty": {
-        "name": "Gsty",
-        "phones": [
-            "4475001305"
-        ],
-        "birthday": null
-    },
-    "Rdoy": {
-        "name": "Rdoy",
-        "phones": [
-            "5616820083"
-        ],
-        "birthday": null
-    },
-    "Pkpu": {
-        "name": "Pkpu",
-        "phones": [
-            "9691491766"
-        ],
-        "birthday": null
-    },
-    "Woab": {
-        "name": "Woab",
-        "phones": [
-            "1922114151"
-        ],
-        "birthday": null
-    },
-    "Mdzk": {
-        "name": "Mdzk",
-        "phones": [
-            "4189650930"
-        ],
-        "birthday": null
-    },
-    "Jonp": {
-        "name": "Jonp",
-        "phones": [
-            "5314015184"
-        ],
-        "birthday": null
+        "birthday": null,
+        "emails": null,
+        "memos": null,
+        "address": null
     }
 }

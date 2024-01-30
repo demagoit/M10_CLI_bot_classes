@@ -1,4 +1,4 @@
-from main import *
+from address_book import *
 
 book = AddressBook()
 
@@ -35,7 +35,7 @@ print(f'\n4.------\n{mult}\n----')
 book.delete("Jane")
 
 # juli_record = Record("Juli", "1/1/80")
-juli_record = Record("Juli", "1980-12-11")
+juli_record = Record("Juli", birthday="1980-12-11")
 juli_record.add_phone("9876543210")
 book.add_record(juli_record)
 
@@ -46,28 +46,28 @@ print(juli_record.days_to_birthday())
 print(john.days_to_birthday())
 print('********************\n')
 
-import random
-letters = 'abcdifghijklmnopqrstuvwxyz'
-numbers = '0123456789'
-for i in range(20):
-    name = ''.join(random.choices(letters, k=4)).title()
-    phone = ''.join(random.choices(numbers, k=10))
-    rec = Record(name)
-    rec.add_phone(phone)
-    book.add_record(rec)
+# import random
+# letters = 'abcdifghijklmnopqrstuvwxyz'
+# numbers = '0123456789'
+# for i in range(20):
+#     name = ''.join(random.choices(letters, k=4)).title()
+#     phone = ''.join(random.choices(numbers, k=10))
+#     rec = Record(name)
+#     rec.add_phone(phone)
+#     book.add_record(rec)
 
-book.rec_per_page = 5
+# book.rec_per_page = 5
 
-for i in book:
-    print(i)
-    print('-----------')
+# for i in book:
+#     print(i)
+#     print('-----------')
 
-book.save_JSON()
+# book.save_JSON()
 
-book_1 = AddressBook()
-book_1.load_JSON()
-book_1.rec_per_page = 10
+# book_1 = AddressBook()
+# book_1.load_JSON()
+# book_1.rec_per_page = 10
 
-for i in book_1:
-    print(i)
-    print('++++++')
+# for i in book_1:
+#     print(i)
+#     print('++++++')
