@@ -11,8 +11,6 @@
 
 import os
 import address_book as book
-import pretty
-from commands import *
 from book_IO import *
 
 
@@ -43,7 +41,7 @@ def main():
     CLI_in = CLI_Input(my_book_phones)
     CLI_out = CLI_Output()
 
-    CLI_out.user_output(ret_rezault)
+    # CLI_out.user_output(ret_rezault)
     while True:
 
         # ret_rezault = get_command_suggestions(my_book_phones)
