@@ -66,7 +66,6 @@ class Field:
     def __str__(self):
         return str(self.__value)  
 
-
     def __repr__(self):
         return str(self.__value)
 
@@ -134,6 +133,7 @@ class Name(Field):
             raise WrongName
         self._Field__value = value
 
+
 class Phone(Field):
     '''
     Class for Phone field. Have value validation. Can have multiple values.
@@ -163,8 +163,7 @@ class Phone(Field):
             if len(phone) != 10:
                 raise WrongPhone
             return True
-
-    
+ 
     def add(self, *phones):
         for phone in phones:
             if self.__is_valid(phone):
