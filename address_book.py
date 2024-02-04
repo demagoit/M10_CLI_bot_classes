@@ -6,7 +6,6 @@ import datetime
 import json
 from re import match
 
-
 class UserExists(Exception):
     # (f'User {name} already exists.')
     pass
@@ -54,7 +53,6 @@ class WrongEmail(Exception):
 class ExistsEmail(Exception):
     pass
 
-
 PARAM_NAMES = ['name', 'phones', 'birthday', 'emails', 'address', 'memos']
 
 class Field:
@@ -66,7 +64,7 @@ class Field:
         self.__value = None
 
     def __str__(self):
-        return str(self.__value) if self.__value else ''  
+        return str(self.__value)  
 
 
     def __repr__(self):
@@ -493,7 +491,7 @@ class Record():
         якщо день народження заданий.
         '''
 
-        if not self.birthday.value:
+        if not self.birthday:
             days_to_bd = None
         else:
             td = datetime.date.today()
@@ -682,7 +680,9 @@ class AddressBookItterator(UserDict):
 # https://pynative.com/make-python-class-json-serializable/
 class BookEncoder(json.JSONEncoder):
     def default(self, obj):
-        if 'data' in obj.__dict__:
+        if isinstance(obj, datetime.date):
+            out = str(obj)
+        elif 'data' in obj.__dict__:
             out = obj.__dict__.get("data")
         elif isinstance(obj, Record):
             out = obj.__dict__

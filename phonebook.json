@@ -60,5 +60,29 @@
         "emails": null,
         "memos": null,
         "address": null
+    },
+    "Nik": {
+        "name": "Nik",
+        "phones": null,
+        "birthday": "1980-12-12",
+        "emails": null,
+        "memos": null,
+        "address": null
+    },
+    "Mike": {
+        "name": "Mike",
+        "phones": [
+            "0012345678"
+        ],
+        "birthday": "1950-05-05",
+        "emails": [
+            "mike@mail.com"
+        ],
+        "memos": [
+            "mike memo"
+        ],
+        "address": [
+            "mike addr"
+        ]
     }
 }
